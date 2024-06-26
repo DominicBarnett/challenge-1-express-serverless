@@ -1,0 +1,82 @@
+{
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.5",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {},
+    "error": null,
+    "machineId": "b1d98889939c86d5ad94e090c08564f7",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  },
+  "/Users/dominic/Desktop/Applied Computer Science/ACS 3210/Challenge-1-express-serverless": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.5",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "servicePath": "/Users/dominic/Desktop/Applied Computer Science/ACS 3210/Challenge-1-express-serverless",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-express-application",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs6.10",
+        "stage": "dev",
+        "region": "us-east-1"
+      },
+      "functions": {
+        "app": {
+          "handler": "index.handler",
+          "events": [
+            {
+              "http": "ANY /"
+            },
+            {
+              "http": "ANY {proxy+}"
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "# serverless.yml\n\nservice: my-express-application\n\nprovider:\n  name: aws\n  runtime: nodejs6.10\n  stage: dev\n  region: us-east-1\n\nfunctions:\n  app:\n    handler: index.handler\n    events:\n      - http: ANY /\n      - http: 'ANY {proxy+}'",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": {
+      "message": "AWS credentials missing or invalid. Run \"serverless\" to set up AWS credentials, or learn more in our docs: http://slss.io/aws-creds-setup. Original error from AWS: Could not load credentials from any providers",
+      "code": "AWS_CREDENTIALS_MISSING"
+    },
+    "machineId": "b1d98889939c86d5ad94e090c08564f7",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "2322631a-3390-486c-8a62-343d4b7e6040",
+    "orgName": "dominicbarnett",
+    "userId": "lvX033dWhkMNk5SShw",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "dominicbarnett",
+    "subscription": null,
+    "userEmail": "dominic.barnett@icloud.com",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
