@@ -1,3 +1,7 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: dominicbarnett
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: my-express-application
 service: my-express-application
 
 custom:
@@ -8,7 +12,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs18.x
   stage: dev
   region: us-east-1
   iamRoleStatements:
