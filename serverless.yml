@@ -4,6 +4,10 @@ org: dominicbarnett
 app: my-express-application
 service: my-express-application
 
+# current node.js version installed is v21.7.3
+# nodejs18.x is the runtime that was recommended by classmate
+# nodejs18.x completes the sls deploy command 
+
 custom:
   tableName: 'users-table-${self:provider.stage}'
   dynamodb:
